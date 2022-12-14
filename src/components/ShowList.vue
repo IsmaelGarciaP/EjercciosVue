@@ -17,6 +17,9 @@
 import { store } from '../Store'
 import TodoItem from './TodoItem.vue'
 
+
+
+
 export default {
     data(){
         return{
@@ -26,6 +29,9 @@ export default {
     components:{
       TodoItem,
     },
+    mounted() {
+        store.getTodos();
+      },
     methods:{
       delTodo(id){
         store.delTodo(id);
